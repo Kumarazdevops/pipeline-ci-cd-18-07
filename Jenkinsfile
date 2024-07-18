@@ -4,7 +4,7 @@
     stages {
         stage('Checkout') {
             steps {
-                git branch : 'mastser', url: 'https://github.com/Kumarazdevops/pipeline-ci-cd-18-07.git'
+                git branch : 'mastser', url : 'https://github.com/Kumarazdevops/pipeline-ci-cd-18-07.git'
             }
         }
 
