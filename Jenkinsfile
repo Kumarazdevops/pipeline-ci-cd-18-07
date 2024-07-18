@@ -1,4 +1,4 @@
-pipeline {
+ pipeline {
     agent any
 
     environment {
@@ -8,11 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch : 'main', url: 'https://github.com/Kumarazdevops/pipeline-ci-cd-18-07.git' 
-            }
-        }
-        stage('Docker login'){
-            steps{
+                git branch : 'mastser', url: 'https://github.com/Kumarazdevops/pipeline-ci-cd-18-07.git' 
                 bat 'docker login -u sravankumar0338 -p Kumar@1997'
             }
         }
@@ -28,7 +24,6 @@ pipeline {
         stage('Run Tests') {
             steps {
                 script {
-                    bat 'docker run -d --name myimgecont1 -p 8071:80 my_image'
                     bat 'docker volume create vol1'
                 }
             }
