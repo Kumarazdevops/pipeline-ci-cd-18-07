@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch : 'main', url: 'https://github.com/Kumarazdevops/project-01_08-07-2024.git' 
+                git branch : 'main', url: 'https://github.com/Kumarazdevops/pipeline-ci-cd-18-07.git' 
                 bat 'docker login -u sravankumar0338 -p Kumar@1997'
             }
         }
@@ -24,6 +24,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 script {
+                    bat 'docker run -d --name myimgecont1 -p 8071:80 my_image'
                     bat 'docker volume create vol1'
                 }
             }
