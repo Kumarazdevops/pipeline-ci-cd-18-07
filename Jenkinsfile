@@ -5,8 +5,8 @@
      stage('Docker login'){
       steps{
        bat 'docker login -u sravankumar0338 -p Kumar@19997'
-      }
-     }
+          }
+        }
         stage('Checkout') {
             steps {
                 git branch : 'mastser', url : 'https://github.com/Kumarazdevops/pipeline-ci-cd-18-07.git'
